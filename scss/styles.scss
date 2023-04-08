@@ -110,8 +110,9 @@ nav {
                 border: 0;
                 padding: 12px 7px;
                 background-color: white;
+                transition: 0.3s;
                 //background-color: #fccbff;
-                
+
 
                 p {
                     transition: 0.3s;
@@ -119,24 +120,17 @@ nav {
                 }
 
                 &:hover {
+                    transition: 0.3s;
+                    box-shadow: inset 6px -6px 12px #fde2ff;
 
-                    animation: animateBoxShadowInset 0.5s ease both;
                     p {
-                        //box-shadow: inset 6px -6px 12px #fde2ff;
+
                         transition: 0.3s;
                         scale: 1.1;
                     }
                 }
             }
         }
-    }
-}
-@keyframes animateBoxShadowInset {
-    from{
-        
-    }
-    to{
-        box-shadow: inset 6px -6px 12px #fde2ff;
     }
 }
 
@@ -285,6 +279,7 @@ footer {
 
     a {
         color: black;
+
         &:hover {
             color: rgb(60, 60, 60);
         }
