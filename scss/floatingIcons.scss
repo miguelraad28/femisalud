@@ -1,0 +1,68 @@
+
+.floatingIcons {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    gap: 10px;
+    width: 300px;
+    align-items: center;
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .floatingWhatsappBackground,
+    .floatingInstagramBackground {
+        opacity: 0;
+        width: 0;
+        height: 40px;
+
+        z-index: -2;
+        translate: -5px 2px;
+        padding-right: 5px;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+        p {
+            margin-left: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+
+    .floatingInstagramLogo:hover {
+        .floatingInstagramBackground {
+            opacity: 1;
+            width: 130px;
+            background-color: rgb(255, 209, 255);
+        }
+    }
+
+    .floatingWhatsappLogo:hover {
+        .floatingWhatsappBackground {
+            opacity: 1;
+            width: 110px;
+            background-color: rgb(182, 255, 164);
+
+        }
+    }
+
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+
+    }
+
+    img {
+        margin-top: 5px;
+        height: 50px;
+    }
+}

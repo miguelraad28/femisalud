@@ -1,195 +1,76 @@
 @import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&family=Montserrat:wght@300;400;600&display=swap");
-@font-face {
-  font-family: Bradley;
-  src: url("./Bradley.ttf") format("opentype"); }
-
-* {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  overflow-x: hidden; }
-
-body {
-  position: relative;
-  padding-bottom: calc(200px + 2em);
-  background-color: #f6f6f6; }
-
-nav div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 0 10px 0;
-  background-color: #ffd6ef; }
-  nav div img {
-    width: 180px; }
-  nav div ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-    font-size: 1.6em;
-    margin: -5px 15px 0 15px; }
-    nav div ul a {
-      text-decoration: none;
-      color: black;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
-
-#homeSection {
-  display: flex;
-  background-image: url("./images/consultorio.jpg");
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden; }
-  #homeSection .homeSectionText {
-    width: 100%;
-    display: flex;
-    justify-content: center; }
-    #homeSection .homeSectionText div:first-child {
-      height: 100%;
-      overflow: hidden; }
-      #homeSection .homeSectionText div:first-child img {
-        height: 500px;
-        margin-top: 20px; }
-    #homeSection .homeSectionText div:last-child {
-      margin-left: -20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-top: -20px; }
-      #homeSection .homeSectionText div:last-child h1 {
-        font-size: 2.12em;
-        font-weight: 500; }
-      #homeSection .homeSectionText div:last-child p:first-of-type {
-        font-size: 1.6em; }
-      #homeSection .homeSectionText div:last-child p {
-        font-size: 1.4em; }
-      #homeSection .homeSectionText div:last-child a {
-        width: 100%; }
-      #homeSection .homeSectionText div:last-child button {
-        width: 100%;
-        cursor: pointer;
-        margin-top: 15px;
-        border-radius: 16px;
-        border: 0;
-        padding: 12px 7px;
-        background-color: white;
-        transition: 0.3s; }
-        #homeSection .homeSectionText div:last-child button p {
-          transition: 0.3s;
-          font-size: 1.2em; }
-        #homeSection .homeSectionText div:last-child button:hover {
-          transition: 0.3s;
-          box-shadow: inset 6px -6px 12px #fde2ff; }
-          #homeSection .homeSectionText div:last-child button:hover p {
-            transition: 0.3s;
-            scale: 1.1; }
-
-#specialtiesSection {
+#servicesSection {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 1000px;
+  max-width: 1300px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: auto;
   margin-top: 20px; }
-  #specialtiesSection h2 {
+  #servicesSection h2 {
     text-align: center;
-    font-size: 1.6em; }
-  #specialtiesSection .specialtyContainer {
-    margin: 0 5% 0 5%;
-    background-color: white;
-    border-radius: 10px;
-    padding: 25px; }
-  #specialtiesSection .specialtyImage {
-    padding: 10px 10px 0px 10px; }
-    #specialtiesSection .specialtyImage h3 {
-      font-size: 1.4em; }
-    #specialtiesSection .specialtyImage div:first-child {
-      padding: 10px; }
-      #specialtiesSection .specialtyImage div:first-child img {
-        transition: 0.3s; }
-        #specialtiesSection .specialtyImage div:first-child img:hover {
-          cursor: pointer;
-          box-shadow: 0 0 5px #932067eb;
-          scale: 1.05;
-          transition: 0.2s; }
-
-footer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  position: absolute;
-  bottom: 0; }
-  footer .gridFooter {
+    font-size: 1.6em;
+    padding-bottom: 20px; }
+  #servicesSection .servicesContainer {
+    margin: 0 20px 0 20px;
+    gap: 2em 1em;
+    justify-content: space-between;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    width: 100vw;
-    padding: 15px;
-    gap: 15px;
-    background: linear-gradient(#ffd2eeeb, #ffd2ee35); }
-    footer .gridFooter .footerLogoContainer {
-      height: 100px; }
-    footer .gridFooter > div {
-      transform: translate(-30px, 0); }
-    footer .gridFooter div:first-child {
-      grid-area: "logo";
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    #servicesSection .servicesContainer .serviceContainer {
+      text-align: center;
+      gap: 15px;
       display: flex;
-      justify-content: end;
-      margin-bottom: -8px; }
-    footer .gridFooter div:last-child {
-      grid-area: "doctorData";
-      width: max-content;
-      display: flex;
-      justify-content: center;
-      margin-top: -10px;
       flex-direction: column;
-      text-align: center; }
-      footer .gridFooter div:last-child .drName {
-        font-size: 1.6em; }
-      footer .gridFooter div:last-child .specialtiesNames {
-        font-size: 1em;
-        font-weight: 700; }
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px; }
+  #servicesSection .serviceImage div:first-child {
+    overflow: hidden;
+    padding: 10px; }
+    #servicesSection .serviceImage div:first-child img {
+      transition: 0.3s;
+      width: calc(100% - 15px); }
+      #servicesSection .serviceImage div:first-child img:hover {
+        cursor: pointer;
+        box-shadow: 0 0 5px #932067eb;
+        scale: 1.03;
+        transition: 0.2s; }
+  #servicesSection .serviceImage h3 {
+    overflow-y: hidden; }
 
-.topDataSection,
-.bottomDataSection {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  padding: 10px;
-  background-color: #4a058b;
-  font-style: italic;
-  color: white; }
-  .topDataSection a,
-  .bottomDataSection a {
-    text-decoration: none;
-    color: white; }
-    .topDataSection a div,
-    .bottomDataSection a div {
+@media (min-width: 796px) {
+  .serviceImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .serviceImage div:first-child {
+      width: 100%;
+      margin-bottom: 5px; }
+      .serviceImage div:first-child img {
+        border-radius: 50%; }
+  .serviceData {
+    padding: 0px 15px 20px 15px; }
+    .serviceData li {
+      margin-bottom: 5px; } }
+
+@media (max-width: 796px) {
+  .serviceContainer {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; }
+  .serviceImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .serviceImage div:first-child {
+      width: 100%;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      overflow: hidden; }
-    .topDataSection a p,
-    .bottomDataSection a p {
-      padding-right: 6px;
-      font-size: 1.2em; }
-    .topDataSection a img,
-    .bottomDataSection a img {
-      height: 26px;
-      margin-right: 3px; }
-    .topDataSection a:hover,
-    .bottomDataSection a:hover {
-      color: antiquewhite; }
-
-.topDataSection {
-  background-color: white; }
-  .topDataSection a {
-    color: black; }
-    .topDataSection a:hover {
-      color: #3c3c3c; }
+      justify-content: center; }
+      .serviceImage div:first-child img {
+        border-radius: 50%;
+        width: calc(160px + 10vw); } }
 
 .floatingIcons {
   display: flex;
@@ -233,13 +114,204 @@ footer {
     justify-content: center;
     align-items: center;
     transition: 0.5s; }
-    .floatingIcons div .whiteBackgroundIcon {
-      width: 0;
-      height: 45;
-      opacity: 0; }
   .floatingIcons img {
     margin-top: 5px;
     height: 50px; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  bottom: 0; }
+  footer .gridFooter {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: 100vw;
+    padding: 15px;
+    gap: 15px;
+    background-color: #ffd6ef; }
+    footer .gridFooter .footerLogoContainer {
+      height: 100px; }
+    footer .gridFooter > div {
+      transform: translate(-30px, 0); }
+    footer .gridFooter div:first-child {
+      grid-area: "logo";
+      display: flex;
+      justify-content: end;
+      margin-bottom: -8px; }
+    footer .gridFooter div:last-child {
+      grid-area: "doctorData";
+      width: max-content;
+      display: flex;
+      justify-content: center;
+      margin-top: -10px;
+      flex-direction: column;
+      text-align: center; }
+      footer .gridFooter div:last-child .drName {
+        font-size: 1.6em; }
+      footer .gridFooter div:last-child .specialtiesNames {
+        font-size: 1em;
+        font-weight: 700; }
+
+.topDataSection,
+.bottomDataSection {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  background-color: #4a058b;
+  font-style: italic;
+  color: white; }
+  .topDataSection a,
+  .bottomDataSection a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold; }
+    .topDataSection a div,
+    .bottomDataSection a div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow: hidden; }
+    .topDataSection a p,
+    .bottomDataSection a p {
+      padding-right: 6px;
+      font-size: 1.2em; }
+    .topDataSection a img,
+    .bottomDataSection a img {
+      height: 26px;
+      margin-right: 3px; }
+    .topDataSection a:hover,
+    .bottomDataSection a:hover {
+      color: antiquewhite; }
+
+.topDataSection {
+  background-color: white; }
+  .topDataSection a {
+    color: black; }
+    .topDataSection a:hover {
+      color: #3c3c3c; }
+
+nav div {
+  display: flex;
+  justify-content: center;
+  background-color: #ffd6ef;
+  flex-wrap: wrap;
+  align-items: stretch; }
+  nav div img {
+    margin-top: 6px;
+    margin-bottom: 3px;
+    width: 180px; }
+  nav div .navigation {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 1.6em;
+    margin: -5px 15px 0 15px; }
+    nav div .navigation .borderInBefore::before {
+      border-bottom: 2px solid black; }
+    nav div .navigation a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      width: max-content;
+      text-decoration: none;
+      color: black;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      position: relative; }
+      nav div .navigation a::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 28px;
+        transition: 1s; }
+      nav div .navigation a:hover {
+        background-color: #ffc8ea; }
+        nav div .navigation a:hover::before {
+          animation: borderWidthTo100 0.3s ease both; }
+      nav div .navigation a:not(:hover)::before {
+        animation: borderWidthTo0 0.3s ease both; }
+
+@keyframes borderWidthTo100 {
+  from {
+    width: 0; }
+  to {
+    width: calc(100% - 30px); } }
+
+@keyframes borderWidthTo0 {
+  from {
+    width: calc(100% - 30px); }
+  to {
+    width: 0; } }
+
+#homeSection {
+  display: flex;
+  background-image: url("./images/consultorio.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden; }
+  #homeSection .homeSectionText {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    #homeSection .homeSectionText div:first-child {
+      height: 100%;
+      overflow: hidden;
+      min-width: max-content; }
+      #homeSection .homeSectionText div:first-child img {
+        height: 500px;
+        margin-top: 20px; }
+    #homeSection .homeSectionText div:last-child {
+      padding: 10px;
+      margin-left: -20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: -20px; }
+      #homeSection .homeSectionText div:last-child h1 {
+        font-size: 2.12em;
+        font-weight: 500; }
+      #homeSection .homeSectionText div:last-child p {
+        font-size: 1.4em; }
+      #homeSection .homeSectionText div:last-child .subtitle {
+        font-size: 1.6em; }
+      #homeSection .homeSectionText div:last-child a {
+        margin-top: 15px;
+        width: 100%;
+        overflow: visible;
+        transition: 0.3s; }
+      #homeSection .homeSectionText div:last-child button {
+        width: 100%;
+        cursor: pointer;
+        border-radius: 16px;
+        border: 0;
+        padding: 12px 7px;
+        background-color: white;
+        box-shadow: 0px 0px 5px rgba(90, 58, 77, 0.499);
+        transition: 0.3s; }
+        #homeSection .homeSectionText div:last-child button p {
+          transition: 0.3s;
+          font-size: 1.6em; }
+        #homeSection .homeSectionText div:last-child button:hover {
+          box-shadow: 0px 0px 8px rgba(90, 58, 77, 0.774), inset 6px -6px 12px #fde2ffbf;
+          transition: 0.3s; }
+          #homeSection .homeSectionText div:last-child button:hover p {
+            scale: 1.1;
+            transition: 0.3s; }
+
+@font-face {
+  font-family: Bradley;
+  src: url("./Bradley.ttf") format("opentype"); }
 
 .montserrat {
   font-family: 'Montserrat', sans-serif; }
@@ -247,70 +319,13 @@ footer {
 .bradley {
   font-family: Bradley; }
 
-@media (min-width: 796px) {
-  .specialtyContainer {
-    display: grid;
-    gap: 25px;
-    grid-template-columns: 30% 70%; }
-    .specialtyContainer:nth-child(odd) {
-      grid-template-columns: 70% 30%; }
-      .specialtyContainer:nth-child(odd) > div {
-        translate: -25px 0; }
-      .specialtyContainer:nth-child(odd) div:first-child {
-        text-align: end; }
-  .specialtyImage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    .specialtyImage div:first-child {
-      width: 100%;
-      margin-bottom: 5px; }
-      .specialtyImage div:first-child img {
-        border-radius: 50%;
-        width: 100%; }
-    .specialtyImage h2 {
-      overflow-y: hidden;
-      font-size: calc(1em + 0.5vw);
-      text-align: center; }
-  .specialtyData {
-    font-size: 1.2em;
-    padding: 20px 15px 20px 15px; }
-    .specialtyData li {
-      margin-bottom: 5px; } }
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
 
-@media (max-width: 796px) {
-  .specialtyContainer {
-    border-radius: 10px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: center; }
-    .specialtyContainer:nth-child(odd) {
-      flex-direction: column-reverse; }
-  .specialtyImage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    .specialtyImage div:first-child {
-      width: 100%;
-      display: flex;
-      justify-content: center; }
-      .specialtyImage div:first-child img {
-        border-radius: 50%;
-        width: calc(160px + 10vw); }
-    .specialtyImage h2 {
-      overflow-y: hidden;
-      font-size: calc(1em + 1.1vw);
-      text-align: center; }
-  .specialtyData {
-    font-size: 1.2em; }
-    .specialtyData li {
-      margin-bottom: 5px; } }
-
-@keyframes showWhiteBackgroundIcon {
-  0% { }
-  100% {
-    opacity: 1; } }
+body {
+  position: relative;
+  padding-bottom: calc(200px + 2em);
+  background-color: #f6f6f6; }

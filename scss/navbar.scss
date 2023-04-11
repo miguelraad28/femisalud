@@ -1,0 +1,87 @@
+nav {
+    div {
+
+        display: flex;
+        justify-content: center;
+        background-color: #ffd6ef;
+        flex-wrap: wrap;
+        align-items: stretch;
+
+        img {
+            margin-top: 6px;
+            margin-bottom: 3px;
+            width: 180px;
+        }
+
+        .navigation {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            font-size: 1.6em;
+            margin: -5px 15px 0 15px;
+            .borderInBefore{
+                &::before{
+                    border-bottom: 2px solid rgb(0, 0, 0);
+                }
+            }
+            a {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: 0 15px;
+                width: max-content;
+                text-decoration: none;
+                color: black;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 28px;
+                    transition: 1s;
+                }
+
+                &:hover {
+                    background-color: #ffc8ea;
+
+                    &::before {
+                        animation: borderWidthTo100 0.3s ease both;
+                    }
+                }
+
+                &:not(:hover) {
+                    &::before {
+                        animation: borderWidthTo0 0.3s ease both;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@keyframes borderWidthTo100 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: calc(100% - 30px);
+    }
+}
+
+@keyframes borderWidthTo0 {
+    from {
+        width: calc(100% - 30px);
+    }
+
+    to {
+        width: 0;
+    }
+}

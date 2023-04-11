@@ -1,0 +1,114 @@
+#servicesSection {
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: auto;
+    margin-top: 20px;
+
+    h2 {
+        text-align: center;
+        font-size: 1.6em;
+        padding-bottom: 20px;
+    }
+
+    .servicesContainer {
+        margin: 0 20px 0 20px;
+        gap: 2em 1em;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        .serviceContainer {
+            text-align: center;
+            gap: 15px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+        }
+    }
+
+    .serviceImage {
+        div:first-child {
+            overflow: hidden;
+            padding: 10px;
+
+            img {
+                transition: 0.3s;
+                width: calc(100% - 15px);
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0 0 5px #932067eb;
+                    scale: 1.03;
+                    transition: 0.2s;
+
+                }
+            }
+
+        }
+
+        h3 {
+            overflow-y: hidden;
+            //font-size: calc(1em + 0.8vw);
+        }
+    }
+
+}
+
+@media (min-width: 796px) {
+    .serviceImage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        div:first-child {
+            width: 100%;
+            margin-bottom: 5px;
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+
+    }
+
+    .serviceData {
+        padding: 0px 15px 20px 15px;
+
+        li {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media (max-width: 796px) {
+    .serviceContainer {
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .serviceImage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        div:first-child {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            img {
+                border-radius: 50%;
+                width: calc(160px + 10vw);
+
+            }
+        }
+    }
+}
