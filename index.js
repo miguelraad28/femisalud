@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (var i = 0; i < aTags.length; i++) {
         (function (i) {
             setTimeout(function () {
-                aTags[i].classList.add("borderInBefore")
+                aTags[i].classList.add("beforeAndAfterInNavbar")
                 console.log(aTags[i])
             }, 310);
         })(i);

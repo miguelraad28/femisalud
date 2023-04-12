@@ -211,8 +211,10 @@ nav div {
     list-style: none;
     font-size: 1.6em;
     margin: -5px 15px 0 15px; }
-    nav div .navigation .borderInBefore::before {
+    nav div .navigation .beforeAndAfterInNavbar::before {
       border-bottom: 2px solid black; }
+    nav div .navigation .beforeAndAfterInNavbar::after {
+      background-color: #ffc8ea; }
     nav div .navigation a {
       height: 100%;
       display: flex;
@@ -223,20 +225,30 @@ nav div {
       color: black;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       position: relative; }
+      nav div .navigation a p {
+        z-index: 2; }
       nav div .navigation a::before {
+        z-index: 2;
         position: absolute;
         content: "";
         width: 0;
-        display: flex;
-        justify-content: center;
-        margin-top: 28px;
-        transition: 1s; }
-      nav div .navigation a:hover {
-        background-color: #ffc8ea; }
-        nav div .navigation a:hover::before {
-          animation: borderWidthTo100 0.3s ease both; }
+        margin-top: 28px; }
+      nav div .navigation a::after {
+        top: 0;
+        translate: -15px;
+        z-index: 1;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 0; }
+      nav div .navigation a:hover::after {
+        animation: scrollUpBackground 0.3s ease both; }
+      nav div .navigation a:hover::before {
+        animation: borderWidthTo100 0.3s ease both; }
       nav div .navigation a:not(:hover)::before {
         animation: borderWidthTo0 0.3s ease both; }
+      nav div .navigation a:not(:hover)::after {
+        animation: scrollDownBackground 0.3s ease both; }
 
 @keyframes borderWidthTo100 {
   from {
@@ -249,6 +261,18 @@ nav div {
     width: calc(100% - 30px); }
   to {
     width: 0; } }
+
+@keyframes scrollUpBackground {
+  from {
+    height: 0; }
+  to {
+    height: 100%; } }
+
+@keyframes scrollDownBackground {
+  from {
+    height: 100%; }
+  to {
+    height: 0; } }
 
 #homeSection {
   display: flex;
