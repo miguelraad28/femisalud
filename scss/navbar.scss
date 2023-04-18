@@ -82,10 +82,10 @@ nav {
 
                 &:not(:hover) {
                     &::before {
-                        animation: borderWidthTo0 0.3s ease both;
+                        animation: borderWidthTo0 0.5s ease both;
                     }
                     &::after{
-                        animation: scrollDownBackground 0.3s ease both;
+                        animation: scrollDownBackground 0.5s ease both;
                     }
                 }
             }

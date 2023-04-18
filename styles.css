@@ -11,7 +11,8 @@
     font-size: 1.6em;
     padding-bottom: 20px; }
   #servicesSection .servicesContainer {
-    margin: 0 20px 0 20px;
+    padding: 10px;
+    margin: 0 20px;
     gap: 2em 1em;
     justify-content: space-between;
     display: grid;
@@ -246,9 +247,9 @@ nav div {
       nav div .navigation a:hover::before {
         animation: borderWidthTo100 0.3s ease both; }
       nav div .navigation a:not(:hover)::before {
-        animation: borderWidthTo0 0.3s ease both; }
+        animation: borderWidthTo0 0.5s ease both; }
       nav div .navigation a:not(:hover)::after {
-        animation: scrollDownBackground 0.3s ease both; }
+        animation: scrollDownBackground 0.5s ease both; }
 
 @keyframes borderWidthTo100 {
   from {
@@ -332,6 +333,62 @@ nav div {
           #homeSection .homeSectionText div:last-child button:hover p {
             scale: 1.1;
             transition: 0.3s; }
+
+#gallerySection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1300px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: auto;
+  margin-top: 20px; }
+  #gallerySection h2 {
+    text-align: center;
+    font-size: 1.6em;
+    padding-bottom: 10px; }
+  #gallerySection .galleryContainer {
+    margin: 0 20px;
+    padding: 10px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    gap: 2em 1em;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    #gallerySection .galleryContainer .photoContainer {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      gap: 10px;
+      background-color: white;
+      border-radius: 10px;
+      padding-bottom: 10px;
+      transition: 0.2s; }
+      #gallerySection .galleryContainer .photoContainer:hover {
+        cursor: pointer;
+        box-shadow: 0 0 5px #932067eb;
+        scale: 1.03;
+        transition: 0.2s; }
+      #gallerySection .galleryContainer .photoContainer .photoImageContainer {
+        width: 100%;
+        overflow: hidden; }
+        #gallerySection .galleryContainer .photoContainer .photoImageContainer div:first-child {
+          overflow: hidden;
+          display: flex;
+          justify-content: center; }
+          #gallerySection .galleryContainer .photoContainer .photoImageContainer div:first-child img {
+            margin: 15px;
+            margin-bottom: 10px;
+            width: 100%;
+            transition: 0.3s;
+            border-radius: 8px;
+            width: calc(100% - 15px); }
+        #gallerySection .galleryContainer .photoContainer .photoImageContainer h3 {
+          overflow: hidden;
+          margin: 0 15px; }
+      #gallerySection .galleryContainer .photoContainer .photoData {
+        margin: 0 15px; }
 
 @font-face {
   font-family: Bradley;
