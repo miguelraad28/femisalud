@@ -125,35 +125,64 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0; }
-  footer .gridFooter {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
+  @media screen and (min-width: 530px) {
+    footer .gridFooter {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      width: 100vw;
+      padding: 15px 0;
+      gap: 15px;
+      background-color: #ffd6ef; }
+      footer .gridFooter .footerLogoContainer {
+        height: 100px; }
+      footer .gridFooter > div {
+        transform: translate(-60px, 0); }
+      footer .gridFooter div:first-child {
+        display: flex;
+        justify-content: end;
+        margin-bottom: -8px; }
+      footer .gridFooter div:last-child {
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        margin-top: -10px;
+        flex-direction: column;
+        text-align: center; }
+        footer .gridFooter div:last-child .drName {
+          font-size: 1.6em; }
+        footer .gridFooter div:last-child .specialtiesNames {
+          font-size: 1em;
+          font-weight: 700; } }
+
+@media screen and (max-width: 530px) {
+  body {
+    padding-bottom: calc(272px + 2em); }
+  .gridFooter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
     width: 100vw;
-    padding: 15px;
+    padding: 15px 0;
     gap: 15px;
     background-color: #ffd6ef; }
-    footer .gridFooter .footerLogoContainer {
+    .gridFooter .footerLogoContainer {
       height: 100px; }
-    footer .gridFooter > div {
-      transform: translate(-30px, 0); }
-    footer .gridFooter div:first-child {
-      grid-area: "logo";
+    .gridFooter div:first-child {
       display: flex;
-      justify-content: end;
-      margin-bottom: -8px; }
-    footer .gridFooter div:last-child {
-      grid-area: "doctorData";
+      justify-content: center; }
+    .gridFooter div:last-child {
       width: max-content;
       display: flex;
       justify-content: center;
       margin-top: -10px;
       flex-direction: column;
       text-align: center; }
-      footer .gridFooter div:last-child .drName {
+      .gridFooter div:last-child .drName {
         font-size: 1.6em; }
-      footer .gridFooter div:last-child .specialtiesNames {
+      .gridFooter div:last-child .specialtiesNames {
         font-size: 1em;
-        font-weight: 700; }
+        font-weight: 700; } }
 
 .topDataSection,
 .bottomDataSection {
@@ -161,14 +190,13 @@ footer {
   justify-content: center;
   gap: 15px;
   padding: 10px;
-  background-color: #4a058b;
-  font-style: italic;
-  color: white; }
+  color: white;
+  background-color: white; }
   .topDataSection a,
   .bottomDataSection a {
+    text-align: center;
     text-decoration: none;
-    color: white;
-    font-weight: bold; }
+    color: #717171; }
     .topDataSection a div,
     .bottomDataSection a div {
       display: flex;
@@ -181,75 +209,95 @@ footer {
       font-size: 1.2em; }
     .topDataSection a img,
     .bottomDataSection a img {
-      height: 26px;
-      margin-right: 3px; }
+      width: 26px;
+      margin-right: 4px;
+      opacity: 0.9; }
+    .topDataSection a:nth-child(2) img,
+    .bottomDataSection a:nth-child(2) img {
+      width: 18px;
+      height: 26px; }
     .topDataSection a:hover,
     .bottomDataSection a:hover {
-      color: antiquewhite; }
+      color: #393939; }
+      .topDataSection a:hover img,
+      .bottomDataSection a:hover img {
+        opacity: 1; }
 
-.topDataSection {
-  background-color: white; }
-  .topDataSection a {
-    color: black; }
-    .topDataSection a:hover {
-      color: #3c3c3c; }
+.bottomDataSection {
+  background-color: #4a058b; }
+  .bottomDataSection a {
+    text-decoration: none;
+    color: white; }
+    .bottomDataSection a:hover {
+      color: #ffedd5; }
 
-nav div {
-  display: flex;
-  justify-content: center;
-  background-color: #ffd6ef;
-  flex-wrap: wrap;
-  align-items: stretch; }
-  nav div img {
-    margin-top: 6px;
-    margin-bottom: 3px;
-    width: 180px; }
-  nav div .navigation {
-    overflow: hidden;
+@media screen and (max-width: 1120px) {
+  .topDataSection a:first-child,
+  .topDataSection a:last-child,
+  .topDataSection a:nth-child(3),
+  .bottomDataSection a:first-child,
+  .bottomDataSection a:last-child,
+  .bottomDataSection a:nth-child(3) {
+    display: none; }
+  .topDataSection a:nth-child(2) img,
+  .bottomDataSection a:nth-child(2) img {
+    display: none; } }
+
+@media screen and (min-width: 750px) {
+  nav div {
     display: flex;
     justify-content: center;
-    align-items: center;
-    list-style: none;
-    font-size: 1.6em;
-    margin: -5px 15px 0 15px; }
-    nav div .navigation .beforeAndAfterInNavbar::before {
-      border-bottom: 2px solid black; }
-    nav div .navigation .beforeAndAfterInNavbar::after {
-      background-color: #ffc8ea; }
-    nav div .navigation a {
-      height: 100%;
+    background-color: #ffd6ef;
+    flex-wrap: wrap; }
+    nav div img {
+      margin-top: 10px;
+      width: 180px; }
+    nav div .navigation {
+      overflow: hidden;
       display: flex;
+      justify-content: center;
       align-items: center;
-      padding: 0 15px;
-      width: max-content;
-      text-decoration: none;
-      color: black;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      position: relative; }
-      nav div .navigation a p {
-        z-index: 2; }
-      nav div .navigation a::before {
-        z-index: 2;
-        position: absolute;
-        content: "";
-        width: 0;
-        margin-top: 28px; }
-      nav div .navigation a::after {
-        top: 0;
-        translate: -15px;
-        z-index: 1;
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 0; }
-      nav div .navigation a:hover::after {
-        animation: scrollUpBackground 0.3s ease both; }
-      nav div .navigation a:hover::before {
-        animation: borderWidthTo100 0.3s ease both; }
-      nav div .navigation a:not(:hover)::before {
-        animation: borderWidthTo0 0.5s ease both; }
-      nav div .navigation a:not(:hover)::after {
-        animation: scrollDownBackground 0.5s ease both; }
+      list-style: none;
+      font-size: 1.6em;
+      margin: -5px 15px 0 15px; }
+      nav div .navigation .beforeAndAfterInNavbar::before {
+        border-bottom: 2px solid black; }
+      nav div .navigation .beforeAndAfterInNavbar::after {
+        background-color: #ffc8ea; }
+      nav div .navigation a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        width: max-content;
+        text-decoration: none;
+        color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: relative; }
+        nav div .navigation a p {
+          z-index: 2; }
+        nav div .navigation a::before {
+          z-index: 2;
+          position: absolute;
+          content: "";
+          width: 0;
+          margin-top: 28px; }
+        nav div .navigation a::after {
+          top: 0;
+          translate: -15px;
+          z-index: 1;
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 0; }
+        nav div .navigation a:hover::after {
+          animation: scrollUpBackground 0.3s ease both; }
+        nav div .navigation a:hover::before {
+          animation: borderWidthTo100 0.3s ease both; }
+        nav div .navigation a:not(:hover)::before {
+          animation: borderWidthTo0 0.5s ease both; }
+        nav div .navigation a:not(:hover)::after {
+          animation: scrollDownBackground 0.5s ease both; } }
 
 @keyframes borderWidthTo100 {
   from {
@@ -275,6 +323,34 @@ nav div {
   to {
     height: 0; } }
 
+@media screen and (max-width: 750px) {
+  nav div {
+    display: flex;
+    justify-content: center;
+    background-color: #ffd6ef;
+    height: 80px; }
+    nav div img {
+      display: none; }
+    nav div .navigation {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      font-size: 1.6em;
+      margin: -5px 15px 0 15px; }
+      nav div .navigation a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        width: max-content;
+        text-decoration: none;
+        color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        position: relative;
+        translate: 0 4px; } }
+
 #homeSection {
   display: flex;
   background-image: url("./images/consultorio.jpg");
@@ -298,7 +374,6 @@ nav div {
         margin-top: 20px; }
     #homeSection .homeSectionText div:last-child {
       padding: 10px;
-      margin-left: -20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -333,6 +408,18 @@ nav div {
           #homeSection .homeSectionText div:last-child button:hover p {
             scale: 1.1;
             transition: 0.3s; }
+
+@media screen and (min-width: 750px) {
+  .homeSectionText div:last-child {
+    margin-left: -20px; } }
+
+@media screen and (max-width: 750px) {
+  .homeSectionText div:first-child {
+    display: none; }
+  .homeSectionText div:last-child {
+    text-align: center;
+    margin-left: 0px;
+    padding: 20px; } }
 
 #gallerySection {
   display: flex;
@@ -408,5 +495,8 @@ nav div {
 
 body {
   position: relative;
-  padding-bottom: calc(200px + 2em);
   background-color: #f6f6f6; }
+
+@media screen and (min-width: 530px) {
+  body {
+    padding-bottom: calc(200px + 2em); } }
