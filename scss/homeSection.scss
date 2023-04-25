@@ -1,119 +1,186 @@
-#homeSection {
-    display: flex;
-    background-image: url("./images/consultorio.jpg");
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-
-    .homeSectionText {
-        width: 100%;
+@media screen and (min-width: 751px) {
+    #homeSection {
         display: flex;
-        justify-content: center;
+        background-image: url("./images/consultorio.jpg");
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
 
-        div:first-child {
-            height: 100%;
-            overflow: hidden;
-            min-width: max-content;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
 
-            img {
-
-                height: 500px;
-                margin-top: 20px;
-                //               filter: drop-shadow(0px 0px 20px #3e3e3ea1);
-            }
-        }
-
-        div:last-child {
-            padding: 10px;
-
+        .homeSectionText {
+            width: 100%;
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            margin-top: -20px;
 
-            h1 {
-                font-size: 2.12em;
-                font-weight: 500;
+            div:first-child {
+                height: 100%;
+                overflow: hidden;
+                min-width: max-content;
+
+                img {
+
+                    height: 500px;
+                    margin-top: 20px;
+                    //               filter: drop-shadow(0px 0px 20px #3e3e3ea1);
+                }
             }
 
-            p {
-                font-size: 1.4em;
-            }
+            div:last-child {
+                padding: 10px;
+                margin-left: -20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: -20px;
 
-            .subtitle {
-                font-size: 1.6em;
-            }
+                .logoHome {
+                    display: none;
+                }
 
-
-            a {
-                margin-top: 15px;
-                width: 100%;
-                overflow: visible;
-                transition: 0.3s;
-            }
-
-            button {
-                width: 100%;
-                cursor: pointer;
-                border-radius: 16px;
-                border: 0;
-                padding: 12px 7px;
-                background-color: white;
-                box-shadow: 0px 0px 5px rgba(90, 58, 77, 0.499);
-                transition: 0.3s;
+                h1 {
+                    font-size: 2.12em;
+                    font-weight: 500;
+                }
 
                 p {
-                    transition: 0.3s;
+                    font-size: 1.4em;
+                }
+
+                .subtitle {
                     font-size: 1.6em;
                 }
 
-                &:hover {
-                    box-shadow: 0px 0px 8px rgba(90, 58, 77, 0.774), inset 6px -6px 12px #fde2ffbf;
+
+                a {
+                    margin-top: 15px;
+                    width: 100%;
+                    overflow: visible;
+                    transition: 0.3s;
+                }
+
+                button {
+                    width: 100%;
+                    cursor: pointer;
+                    border-radius: 16px;
+                    border: 0;
+                    padding: 12px 7px;
+                    background-color: white;
+                    box-shadow: 0px 0px 5px rgba(90, 58, 77, 0.499);
                     transition: 0.3s;
 
                     p {
-                        scale: 1.1;
                         transition: 0.3s;
+                        font-size: 1.6em;
+                    }
+
+                    &:hover {
+                        box-shadow: 0px 0px 8px rgba(90, 58, 77, 0.774), inset 6px -6px 12px #fde2ffbf;
+                        transition: 0.3s;
+
+                        p {
+                            scale: 1.1;
+                            transition: 0.3s;
+                        }
                     }
                 }
             }
         }
     }
-}
 
-@media screen and (min-width: 750px) {
-    .logoHome {
-        display: none;
-    }
-
-    .homeSectionText {
-        div:last-child {
-            margin-left: -20px;
-        }
-    }
 }
 
 @media screen and (max-width: 750px) {
-    .logoHome {
+    #homeSection {
         display: flex;
-        justify-content: center;
-        img{
-            height: 80px;
+        background-image: url("./images/consultorio.jpg");
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+
+        .homeSectionText {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            div:first-child {
+                display: none;
+            }
+
+            div:last-child {
+                text-align: center;
+                margin-left: 0px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: -20px;
+
+                .logoHome {
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        height: 80px;
+                    }
+                }
+
+                h1 {
+                    font-size: 1.8em;
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: 1.em;
+                }
+
+                .subtitle {
+                    font-size: 1.2em;
+                }
+
+
+                a {
+                    margin-top: 15px;
+                    width: 100%;
+                    overflow: visible;
+                    transition: 0.3s;
+                }
+
+                button {
+                    width: 100%;
+                    cursor: pointer;
+                    border-radius: 16px;
+                    border: 0;
+                    padding: 12px 7px;
+                    background-color: white;
+                    box-shadow: 0px 0px 5px rgba(90, 58, 77, 0.499);
+                    transition: 0.3s;
+
+                    p {
+                        transition: 0.3s;
+                        font-size: 1.6em;
+                    }
+
+                    &:hover {
+                        box-shadow: 0px 0px 8px rgba(90, 58, 77, 0.774), inset 6px -6px 12px #fde2ffbf;
+                        transition: 0.3s;
+
+                        p {
+                            scale: 1.1;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
         }
     }
 
-    .homeSectionText div:first-child {
-        display: none;
-    }
-
-    .homeSectionText div:last-child {
-        text-align: center;
-        margin-left: 0px;
-        padding: 20px;
-    }
 }
