@@ -5,11 +5,11 @@
   max-width: 1300px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: auto;
-  margin-top: 20px; }
+  padding-top: 20px; }
   #servicesSection h2 {
     text-align: center;
     font-size: 1.6em;
-    padding-bottom: 20px; }
+    padding-bottom: 10px; }
   #servicesSection .servicesContainer {
     padding: 10px;
     margin: 0 20px;
@@ -73,51 +73,94 @@
         border-radius: 50%;
         width: calc(160px + 10vw); } }
 
-.floatingIcons {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-  gap: 10px;
-  width: 300px;
-  align-items: center; }
-  .floatingIcons a {
-    color: black;
-    text-decoration: none; }
-  .floatingIcons .floatingWhatsappBackground,
-  .floatingIcons .floatingInstagramBackground {
-    opacity: 0;
-    width: 0;
-    height: 40px;
-    z-index: -2;
-    translate: -5px 2px;
-    padding-right: 5px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px; }
-    .floatingIcons .floatingWhatsappBackground p,
-    .floatingIcons .floatingInstagramBackground p {
-      margin-left: 10px;
-      white-space: nowrap;
-      overflow: hidden; }
-  .floatingIcons .floatingInstagramLogo:hover .floatingInstagramBackground {
-    opacity: 1;
-    width: 130px;
-    background-color: #ffd1ff; }
-  .floatingIcons .floatingWhatsappLogo:hover .floatingWhatsappBackground {
-    opacity: 1;
-    width: 110px;
-    background-color: #b6ffa4; }
-  .floatingIcons div {
+@media screen and (min-width: 750px) {
+  .floatingIcons {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    transition: 0.5s; }
-  .floatingIcons img {
-    margin-top: 5px;
-    height: 50px; }
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    gap: 10px;
+    width: 300px;
+    align-items: center; }
+    .floatingIcons a {
+      color: black;
+      text-decoration: none; }
+    .floatingIcons .floatingWhatsappBackground,
+    .floatingIcons .floatingInstagramBackground {
+      opacity: 0;
+      width: 0;
+      height: 40px;
+      z-index: -2;
+      translate: -5px 2px;
+      padding-right: 5px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px; }
+      .floatingIcons .floatingWhatsappBackground p,
+      .floatingIcons .floatingInstagramBackground p {
+        margin-left: 10px;
+        white-space: nowrap;
+        overflow: hidden; }
+    .floatingIcons .floatingInstagramLogo:hover .floatingInstagramBackground {
+      opacity: 1;
+      width: 130px;
+      background-color: #ffd1ff; }
+    .floatingIcons .floatingWhatsappLogo:hover .floatingWhatsappBackground {
+      opacity: 1;
+      width: 110px;
+      background-color: #b6ffa4; }
+    .floatingIcons div {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s; }
+    .floatingIcons img {
+      margin-top: 5px;
+      height: 50px; } }
+
+@media screen and (max-width: 750px) {
+  .floatingIcons {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 100;
+    gap: 6px;
+    width: 300px;
+    align-items: center; }
+    .floatingIcons a {
+      color: black;
+      text-decoration: none; }
+    .floatingIcons .floatingWhatsappBackground,
+    .floatingIcons .floatingInstagramBackground {
+      opacity: 0;
+      width: 0;
+      height: 40px;
+      z-index: -2;
+      translate: -5px 2px;
+      padding-right: 5px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px; }
+      .floatingIcons .floatingWhatsappBackground p,
+      .floatingIcons .floatingInstagramBackground p {
+        margin-left: 10px;
+        white-space: nowrap;
+        overflow: hidden; }
+    .floatingIcons div {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s; }
+    .floatingIcons img {
+      overflow: hidden;
+      margin-top: 5px;
+      height: 35px; } }
 
 footer {
   display: flex;
@@ -410,10 +453,17 @@ footer {
             transition: 0.3s; }
 
 @media screen and (min-width: 750px) {
+  .logoHome {
+    display: none; }
   .homeSectionText div:last-child {
     margin-left: -20px; } }
 
 @media screen and (max-width: 750px) {
+  .logoHome {
+    display: flex;
+    justify-content: center; }
+    .logoHome img {
+      height: 80px; }
   .homeSectionText div:first-child {
     display: none; }
   .homeSectionText div:last-child {

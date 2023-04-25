@@ -30,7 +30,7 @@
 
         div:last-child {
             padding: 10px;
-            
+
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -87,6 +87,10 @@
 }
 
 @media screen and (min-width: 750px) {
+    .logoHome {
+        display: none;
+    }
+
     .homeSectionText {
         div:last-child {
             margin-left: -20px;
@@ -95,6 +99,14 @@
 }
 
 @media screen and (max-width: 750px) {
+    .logoHome {
+        display: flex;
+        justify-content: center;
+        img{
+            height: 80px;
+        }
+    }
+
     .homeSectionText div:first-child {
         display: none;
     }
