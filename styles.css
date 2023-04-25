@@ -421,6 +421,7 @@ footer {
           height: 500px;
           margin-top: 20px; }
       #homeSection .homeSectionText div:last-child {
+        overflow: hidden;
         padding: 10px;
         margin-left: -20px;
         display: flex;
@@ -478,6 +479,7 @@ footer {
       #homeSection .homeSectionText div:first-child {
         display: none; }
       #homeSection .homeSectionText div:last-child {
+        overflow: hidden;
         text-align: center;
         margin-left: 0px;
         padding: 20px;
