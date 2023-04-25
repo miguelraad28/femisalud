@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     max-width: 1300px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
     margin: auto;
     padding-top: 20px;
 
@@ -22,7 +22,7 @@
 
         .serviceContainer {
             text-align: center;
-            gap: 15px;
+            gap: 10px;
             display: flex;
             flex-direction: column;
             background-color: white;

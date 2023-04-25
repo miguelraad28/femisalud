@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   max-width: 1300px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: auto;
   padding-top: 20px; }
   #servicesSection h2 {
@@ -19,7 +18,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
     #servicesSection .servicesContainer .serviceContainer {
       text-align: center;
-      gap: 15px;
+      gap: 10px;
       display: flex;
       flex-direction: column;
       background-color: white;
@@ -231,7 +230,7 @@ footer {
 .bottomDataSection {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 13px;
   padding: 10px;
   color: white;
   background-color: white; }
@@ -249,7 +248,7 @@ footer {
     .topDataSection a p,
     .bottomDataSection a p {
       padding-right: 6px;
-      font-size: 1.2em; }
+      font-size: 1em; }
     .topDataSection a img,
     .bottomDataSection a img {
       width: 26px;
@@ -275,6 +274,16 @@ footer {
       color: #ffedd5; }
 
 @media screen and (max-width: 1120px) {
+  .topDataSection,
+  .bottomDataSection {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 5px;
+    color: white;
+    background-color: white; }
+  .bottomDataSection {
+    background-color: #4a058b; }
   .topDataSection a:nth-child(2) p,
   .bottomDataSection a:nth-child(2) p {
     font-size: 0.85em;
