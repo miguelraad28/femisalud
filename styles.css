@@ -160,7 +160,7 @@
     .floatingIcons img {
       overflow: hidden;
       margin-top: 5px;
-      height: 35px; } }
+      height: 40px; } }
 
 footer {
   display: flex;
@@ -394,7 +394,7 @@ footer {
         position: relative;
         translate: 0 4px; } }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 751px) {
   #homeSection {
     display: flex;
     background-image: url("./images/consultorio.jpg");
@@ -474,8 +474,9 @@ footer {
       #homeSection .homeSectionText div:first-child {
         display: none; }
       #homeSection .homeSectionText div:last-child {
-        padding: 10px;
-        margin-left: -20px;
+        text-align: center;
+        margin-left: 0px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -486,12 +487,12 @@ footer {
           #homeSection .homeSectionText div:last-child .logoHome img {
             height: 80px; }
         #homeSection .homeSectionText div:last-child h1 {
-          font-size: 2.12em;
+          font-size: 1.6em;
           font-weight: 500; }
         #homeSection .homeSectionText div:last-child p {
-          font-size: 1.4em; }
+          font-size: 1.2em; }
         #homeSection .homeSectionText div:last-child .subtitle {
-          font-size: 1.6em; }
+          font-size: 1.3em; }
         #homeSection .homeSectionText div:last-child a {
           margin-top: 15px;
           width: 100%;
@@ -514,19 +515,7 @@ footer {
             transition: 0.3s; }
             #homeSection .homeSectionText div:last-child button:hover p {
               scale: 1.1;
-              transition: 0.3s; }
-  .homeSectionText div:first-child {
-    display: none; }
-  .homeSectionText div:last-child {
-    text-align: center;
-    margin-left: 0px;
-    padding: 20px; }
-    .homeSectionText div:last-child h1 {
-      font-size: 1.8em; }
-    .homeSectionText div:last-child p {
-      font-size: 1em; }
-    .homeSectionText div:last-child .subtitle {
-      font-size: 1.2em; } }
+              transition: 0.3s; } }
 
 #gallerySection {
   display: flex;
