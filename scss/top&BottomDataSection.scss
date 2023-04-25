@@ -61,7 +61,13 @@
 }
 
 @media screen and (max-width: 1120px) {
-
+    .topDataSection a:nth-child(2),
+    .bottomDataSection a:nth-child(2){
+        p{
+            font-size: 0.6em;
+            flex-wrap: nowrap;
+        }
+    }
     .topDataSection a:first-child,
     .topDataSection a:last-child,
     .topDataSection a:nth-child(3),
