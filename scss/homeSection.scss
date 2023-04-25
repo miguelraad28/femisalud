@@ -129,20 +129,24 @@
                     justify-content: center;
 
                     img {
-                        height: 80px;
+                        height: 100px;
                     }
                 }
 
                 h1 {
+                    overflow: visible;
+                    flex-wrap: nowrap;
                     font-size: 1.6em;
                     font-weight: 500;
                 }
 
                 p {
+                    overflow: visible;
                     font-size: 1.2em;
                 }
 
                 .subtitle {
+                    overflow: visible;
                     font-size: 1.3em;
                 }
 

@@ -485,13 +485,17 @@ footer {
           display: flex;
           justify-content: center; }
           #homeSection .homeSectionText div:last-child .logoHome img {
-            height: 80px; }
+            height: 100px; }
         #homeSection .homeSectionText div:last-child h1 {
+          overflow: visible;
+          flex-wrap: nowrap;
           font-size: 1.6em;
           font-weight: 500; }
         #homeSection .homeSectionText div:last-child p {
+          overflow: visible;
           font-size: 1.2em; }
         #homeSection .homeSectionText div:last-child .subtitle {
+          overflow: visible;
           font-size: 1.3em; }
         #homeSection .homeSectionText div:last-child a {
           margin-top: 15px;
