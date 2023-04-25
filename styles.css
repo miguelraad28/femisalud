@@ -277,7 +277,7 @@ footer {
 @media screen and (max-width: 1120px) {
   .topDataSection a:nth-child(2) p,
   .bottomDataSection a:nth-child(2) p {
-    font-size: 0.6em;
+    font-size: 0.85em;
     flex-wrap: nowrap; }
   .topDataSection a:first-child,
   .topDataSection a:last-child,
